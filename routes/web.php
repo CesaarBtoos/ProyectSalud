@@ -65,7 +65,7 @@ Route::resource('roles','RoleController')->middleware('auth')->middleware('auth'
 
 
 Route::resource('/proveedores', 'ProveedoresController')->middleware('auth');
-Route::resource('/ofertas/todas', 'PublicofertController')->middleware('auth');
+Route::resource('/ofertas', 'PublicofertController')->middleware('auth');
 
 Route::resource('/Categorias', 'CategoriasController')->middleware('auth');
 Route::resource('/producto', 'ProductoController')->middleware('auth');
