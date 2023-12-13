@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="imagenes" href="{{asset('img/favicon.ico')}}">
-    <link href="{{asset('css/backend.css') }}" rel="stylesheet">
-    <link href="{{asset('ccs/cssstyle.css') }}" rel="stylesheet">
+    <link href="https://practica-laravel-deploy1.azurewebsites.net/css/backend.css" rel="stylesheet">
+    <link href="https://practica-laravel-deploy1.azurewebsites.net/ccs/cssstyle.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
@@ -15,9 +15,9 @@
     
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <link type="text/css" href="{{asset('css/carrucel.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{asset('css/stylee.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{asset('css/slick.css') }}" rel="stylesheet">
+    <link type="text/css" href="https://practica-laravel-deploy1.azurewebsites.net/css/carrucel.css" rel="stylesheet">
+    <link type="text/css" href="https://practica-laravel-deploy1.azurewebsites.net/css/stylee.css" rel="stylesheet">
+    <link type="text/css" href="https://practica-laravel-deploy1.azurewebsites.net/css/slick.css" rel="stylesheet">
 
     
     <title>Login</title>
