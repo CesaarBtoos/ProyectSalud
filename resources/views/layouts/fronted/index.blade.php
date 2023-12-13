@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="imagenes" href="{{asset('img/favicon.ico')}}">
-    <title>+ SALUD</title>
+    <title>MORE SALUD</title>
 
     <!--LINNK-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
@@ -17,9 +17,9 @@
      <!--Style-->
      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <link type="text/css" href="{{asset('css/carrucel.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{asset('css/style.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{asset('css/slick.css') }}" rel="stylesheet">
+    <link type="text/css" href="https://searchmoresalud.azurewebsites.net/css/carrucel.css" rel="stylesheet">
+    <link type="text/css" href="https://searchmoresalud.azurewebsites.net/css/style.css" rel="stylesheet">
+    <link type="text/css" href="https://searchmoresalud.azurewebsites.net/css/slick.css" rel="stylesheet">
     @laravelPWA
 </head>
 <body> 
