@@ -71,8 +71,6 @@ Route::resource('/Categorias', 'CategoriasController')->middleware('auth');
 Route::resource('/producto', 'ProductoController')->middleware('auth');
 Route::resource('/index', 'PublicofertController')->middleware('auth');
 
-Route::get('/offline', function () {    
-    return view('modules/laravelpwa/offline');
-});
+
 
 /*ADMIN*/
