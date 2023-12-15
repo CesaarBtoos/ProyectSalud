@@ -10,6 +10,25 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  test:
+      runs-on: ubuntu-latest
+
+      steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run TestCafe
+        run: npm test
+
   build:
     runs-on: ubuntu-latest
 
@@ -65,4 +84,4 @@ jobs:
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B79CBDDC527D441CB036F2F78E804191 }}
 
-          
+        name: Test End-to-End
