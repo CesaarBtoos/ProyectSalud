@@ -56,7 +56,7 @@ Route::post('/registrarusuario',[Register::class,'registerusuario'])->name('regi
 
 
 Auth::routes();
-Route::get('/welcome', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/clientes/todas', 'ClientesController')->middleware('auth');
 /* GESTION*/
 Route::resource('usuarios','UserController')->middleware('auth')->middleware('auth');
