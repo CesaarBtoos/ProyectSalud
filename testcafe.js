@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
 
 fixture('Prueba de Extremo a Extremo')
-    .page('http://127.0.0.1:8000/'); // Ajusta la URL según la configuración de tu aplicación Laravel
+    .page('https://practica-laravel-deploy1.azurewebsites.net/'); 
 
 test('Prueba de Inicio de Sesión', async t => {
     // Interactuar con elementos en la página
