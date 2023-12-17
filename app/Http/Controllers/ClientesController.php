@@ -12,7 +12,7 @@ class ClientesController extends Controller
         return view('clientes.todas.index',['clientes' => Clientes::all()]);
     }
     
-    public function clientes3(){
+    public function clientes(){
 
         $clientes = Clientes::all();
         return view('nosotros',
