@@ -13,11 +13,8 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
-        extensions: mbstring, zip, pdo, exif, pcntl
+    - name: Set up Laravel
+      uses: laravel/actions/setup-laravel@v2
 
     - name: Install Composer Dependencies
       run: composer install --prefer-dist --no-progress --no-suggest

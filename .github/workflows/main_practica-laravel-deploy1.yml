@@ -65,4 +65,18 @@ jobs:
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B79CBDDC527D441CB036F2F78E804191 }}
 
+      - name: Install Composer Dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+        env:
+            COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+
+      - name: Cache Composer Dependencies
+        uses: actions/cache@v2
+        with:
+         path: vendor
+        key: composer-${{ hashFiles('**/composer.lock') }}
+    restore-keys: |
+      composer-
+
+
           
