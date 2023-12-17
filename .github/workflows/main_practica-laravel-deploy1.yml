@@ -2,6 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy PHP app to Azure Web App - practica-laravel-deploy1
+name: Laravel Tests
 
 on:
   push:
@@ -15,6 +16,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -39,6 +42,21 @@ jobs:
         with:
           name: php-app
           path: release.zip
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Laravel
+      uses: laravel/actions/setup-laravel@v2
+
+    - name: Install Composer Dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Set up Laravel Environment
+      run: cp .env.example .env && php artisan key:generate
+
+    - name: Run Laravel Tests
+      run: php artisan test
 
   deploy:
     runs-on: ubuntu-latest
