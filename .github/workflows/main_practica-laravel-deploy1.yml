@@ -1,3 +1,4 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy PHP app to Azure Web App - practica-laravel-deploy1
@@ -14,8 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Checkout Repository
-        uses: actions/checkout@v2
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -65,19 +64,5 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B79CBDDC527D441CB036F2F78E804191 }}
-
-      - name: Install Composer Dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
-        env:
-            COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
-
-      - name: Cache Composer Dependencies
-        uses: actions/cache@v2
-        with:
-         path: vendor
-        key: composer-${{ hashFiles('**/composer.lock') }}
-    restore-keys: |
-      composer-
-
 
           
