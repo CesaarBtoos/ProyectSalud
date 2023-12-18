@@ -12,14 +12,14 @@ class ClientesController extends Controller
         return view('clientes.todas.index',['clientes' => Clientes::all()]);
     }
     
-    public function clientes(){
+    public function clientes1(){
 
         $clientes = Clientes::all();
         return view('nosotros',
                 ['clientes' => $clientes]);
     }
     
-    public function store(Request $request)
+    public function store2(Request $request)
     {
         $cliente = new Clientes();
             
