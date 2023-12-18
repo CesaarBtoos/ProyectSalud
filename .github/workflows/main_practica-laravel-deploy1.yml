@@ -40,13 +40,18 @@ jobs:
           name: php-app
           path: release.zip
 
+      - name: Run Tests
+      id: run-tests
+      run: php artisan test
+
   deploy:
+    needs: laravel-tests
+    if: always() && needs.laravel-tests.result == 'success'
     runs-on: ubuntu-latest
-    needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
+
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
@@ -64,5 +69,3 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B79CBDDC527D441CB036F2F78E804191 }}
-
-          
