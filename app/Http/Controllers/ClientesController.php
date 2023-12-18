@@ -19,7 +19,7 @@ class ClientesController extends Controller
                 ['clientes' => $clientes]);
     }
     
-    public function store(Request $request)
+    public function store1(Request $request)
     {
         $cliente = new Clientes();
             
@@ -33,7 +33,7 @@ class ClientesController extends Controller
         $cliente->save();
         return redirect('clientes/todas');
     }
-    public function edit($id)
+    public function edit2($id)
     {
         return view('clientes.todas.edit',['cliente' => Clientes::findOrFail($id)]);
     }
