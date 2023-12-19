@@ -12,7 +12,7 @@ use App\Models\Role;
 
 class CategoriasController extends Controller
 {
-    public function index56(){
+    public function index(){
 
         $categorias = Categorias::all();
         return view('Categorias.index', compact('categorias'));
